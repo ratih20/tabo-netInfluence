@@ -1,214 +1,103 @@
-```html
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Global Social Media Management</title>
-    <meta name="description" content="Elevate your international social media presence with our expert management services.  We handle strategy, content creation, and advertising for global reach.">
-    <link rel="stylesheet" href="style.css">  <!-- Link to your CSS file -->
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "Global Social Media Management",
-      "url": "https://yourwebsite.com",  <!-- Replace with your website URL -->
-      "description": "Expert social media management services for international businesses.",
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "https://yourwebsite.com/?q={search_term_string}",
-        "query-input": "required name=search_term_string"
-      },
-      "sameAs": [
-        "https://www.facebook.com/yourpage",  <!-- Replace with your social media links -->
-        "https://www.instagram.com/yourpage",
-        "https://www.twitter.com/yourpage"
-      ]
-    }
-    </script>
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebPage",
-      "headline": "Global Social Media Management Services",
-      "inLanguage": "en-US",
-      "isPartOf": {
-        "@type": "WebSite",
-        "@id": "https://yourwebsite.com"
-      },
-      "mainContentOfPage": {
-        "@type": "NewsArticle",
-        "headline": "Boost Your International Brand with Our Social Media Experts",
-        "datePublished": "2024-02-29",
-        "dateModified": "2024-03-01"
-      }
-    }
-  </script>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org/",
-    "@type": "Product",
-    "name": "International Social Media Management Package",
-    "description": "Our comprehensive package includes strategy development, content creation, community management, and performance analysis for your international social media campaigns.",
-    "brand": {
-      "@type": "Brand",
-      "name": "Your Brand Name"
-    },
-    "offers": {
-      "@type": "Offer",
-      "price": "1000",  <!-- Replace with your price -->
-      "priceCurrency": "USD",  <!-- Replace with your currency -->
-      "availability": "https://schema.org/InStock",
-      "url": "https://yourwebsite.com/pricing"  <!--Replace with pricing page URL-->
-    }
-  }
-  </script>
+    <title>Website Baruku</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#">Dashboard</a></li>
-                <li><a href="#">Service</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Post</a></li>
-            </ul>
-        </nav>
+    <header class="main-header">
+        <div class="container">
+            <h1 class="logo"><a href="#">Nama Website Anda</a></h1>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#home">Beranda</a></li>
+                    <li><a href="#about">Tentang Kami</a></li>
+                    <li><a href="#services">Layanan</a></li>
+                    <li><a href="#contact">Kontak</a></li>
+                </ul>
+            </nav>
+            <button class="menu-toggle" aria-label="Toggle Navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
     </header>
 
-    <section id="hero">
-        <h1>Global Social Media Domination</h1>
-        <h2>Expand Your Reach, Amplify Your Voice</h2>
-        <h3>Unlock the power of international social media marketing.</h3>
-        <button>Get Started</button>
-    </section>
+    <main>
+        <section id="home" class="hero-section">
+            <div class="container">
+                <h2>Selamat Datang di Website Kami!</h2>
+                <p>Temukan informasi menarik dan layanan terbaik di sini.</p>
+                <a href="#services" class="btn">Pelajari Lebih Lanjut</a>
+            </div>
+        </section>
 
-    <section id="services">
-        <h2>Our Services</h2>
-        <div class="service-grid">
-            <div class="service">
-                <h3>Strategic Planning</h3>
-                <h4>Tailored strategies for maximum impact.</h4>
+        <section id="about" class="about-section">
+            <div class="container">
+                <h2>Tentang Kami</h2>
+                <p>Kami adalah tim yang berdedikasi untuk menyediakan solusi inovatif dan berkualitas tinggi. Misi kami adalah membantu Anda mencapai tujuan Anda dengan mudah dan efisien.</p>
+                <p>Didirikan pada tahun [Tahun], kami telah melayani berbagai klien dengan beragam kebutuhan, dan kami bangga dengan reputasi kami dalam keunggulan dan kepuasan pelanggan.</p>
             </div>
-            <div class="service">
-                <h3>Content Creation</h3>
-                <h4>Engaging content that resonates globally.</h4>
+        </section>
+
+        <section id="services" class="services-section">
+            <div class="container">
+                <h2>Layanan Kami</h2>
+                <div class="service-grid">
+                    <div class="service-item">
+                        <h3>Desain Web</h3>
+                        <p>Membangun website modern dan responsif yang menarik perhatian.</p>
+                    </div>
+                    <div class="service-item">
+                        <h3>Pengembangan Aplikasi</h3>
+                        <p>Membuat aplikasi mobile dan web yang powerful dan intuitif.</p>
+                    </div>
+                    <div class="service-item">
+                        <h3>Konsultasi IT</h3>
+                        <p>Memberikan saran ahli untuk kebutuhan teknologi informasi Anda.</p>
+                    </div>
+                </div>
             </div>
-            <div class="service">
-                <h3>Community Management</h3>
-                <h4>Build strong relationships with your international audience.</h4>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <h2>Hubungi Kami</h2>
+                <p>Punya pertanyaan atau ingin berdiskusi? Jangan ragu untuk menghubungi kami!</p>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Nama:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Pesan:</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Kirim Pesan</button>
+                </form>
             </div>
-            <div class="service">
-                <h3>Performance Analysis</h3>
-                <h4>Data-driven insights for continuous improvement.</h4>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2025 Nama Website Anda. Semua Hak Cipta Dilindungi.</p>
+            <div class="social-links">
+                <a href="#" aria-label="Facebook"><img src="https://via.placeholder.com/24/3b5998/ffffff?text=F" alt="Facebook"></a>
+                <a href="#" aria-label="Twitter"><img src="https://via.placeholder.com/24/1da1f2/ffffff?text=T" alt="Twitter"></a>
+                <a href="#" aria-label="LinkedIn"><img src="https://via.placeholder.com/24/0077b5/ffffff?text=L" alt="LinkedIn"></a>
             </div>
         </div>
-    </section>
-
-    <section id="about">
-        <h2>About Us</h2>
-        <p>We are a team of experienced social media experts dedicated to helping businesses achieve their international marketing goals.</p>
-    </section>
-
-    <footer>
-        <p>&copy; 2024 Global Social Media Management</p>
     </footer>
 
-    <script src="script.js"></script> <!-- Link to your JS file for animations -->
+    <script src="js/script.js"></script>
 </body>
 </html>
-```
-
-**style.css (Example):**
-
-```css
-body {
-    margin: 0;
-    font-family: sans-serif;
-    background: linear-gradient(to right, #4CAF50, #8BC34A); /* Initial gradient */
-    background-size: 400% 400%;
-    animation: gradientAnimation 15s ease infinite; /* Animation will be defined in JS */
-}
-
-header {
-    background-color: rgba(0,0,0,0.5);
-    padding: 1rem 0;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    text-align: center;
-}
-
-nav li {
-    display: inline;
-    margin: 0 1rem;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-}
-
-
-#hero {
-    text-align: center;
-    padding: 100px 0;
-    color: white;
-}
-
-#hero button {
-    padding: 10px 20px;
-    background-color: #fff;
-    color: #333;
-    border: none;
-    cursor: pointer;
-}
-
-#services {
-    padding: 50px 0;
-}
-
-.service-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-gap: 20px;
-}
-
-.service {
-    padding: 20px;
-    border: 1px solid #ccc;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-
-footer {
-    text-align: center;
-    padding: 1rem 0;
-    background-color: rgba(0,0,0,0.5);
-    color: white;
-}
-```
-
-**script.js (Example):**
-
-```javascript
-const body = document.body;
-body.style.background = "linear-gradient(to right, #4CAF50, #8BC34A)";
-body.style.backgroundSize = "400% 400%";
-
-body.style.animation = "gradientAnimation 15s ease infinite";
-
-@keyframes gradientAnimation {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
-}
-```
-
-Remember to replace placeholder URLs, text, and pricing information with your own.  You will need to create the `style.css` and `script.js` files and link them correctly.  This provides a solid foundation; you can further enhance the design with more advanced CSS and JavaScript techniques.  Consider using a CSS framework like Bootstrap or Tailwind CSS for easier styling. Remember to thoroughly test the schema.org implementation with a schema validator to ensure correctness.
