@@ -1,1 +1,278 @@
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    line-height: 1.6;
+    color: #333;
+    /* --- BACKGROUND GRADIENT ANIMASI BARU --- */
+    background: linear-gradient(
+        -45deg,
+        #f09433, /* Oranye */
+        #e6683c, /* Oranye Kemerahan */
+        #dc2743, /* Merah */
+        #cc2366, /* Merah Ungu */
+        #bc1888, /* Ungu */
+        #833ab4, /* Ungu Biru */
+        #5851db, /* Biru Tua */
+        #405de6, /* Biru */
+        #5851db, /* Biru Tua */
+        #833ab4, /* Ungu Biru */
+        #bc1888, /* Ungu */
+        #cc2366, /* Merah Ungu */
+        #dc2743, /* Merah */
+        #e6683c, /* Oranye Kemerahan */
+        #f09433  /* Oranye */
+    );
+    background-size: 400% 400%; /* Membuat gradien lebih besar dari viewport */
+    animation: gradientAnimation 15s ease infinite; /* Menerapkan animasi */
+    background-attachment: fixed; /* Membuat background tetap saat scroll */
+    /* ------------------------------------------- */
+}
 
+/* --- KEYFRAMES UNTUK ANIMASI GRADIENT --- */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+/* ------------------------------------------- */
+
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3 {
+    color: #333;
+    margin-top: 0;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+    text-decoration: none;
+}
+
+/* Header */
+.main-header {
+    background-color: #fff;
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    margin: 0;
+}
+
+.logo a {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+}
+
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.main-nav ul li {
+    margin-left: 25px;
+}
+
+.main-nav ul li a {
+    color: #555;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.main-nav ul li a:hover {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.menu-toggle {
+    display: none; /* Hidden on desktop */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin-bottom: 5px;
+    border-radius: 2px;
+}
+
+/* Hero Section */
+.hero-section {
+    /* Menggunakan rgba untuk transparansi agar background body terlihat */
+    background-color: rgba(226, 240, 255, 0.8);
+    color: #333;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.hero-section h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: #007bff;
+}
+
+.hero-section p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+/* Section Styling */
+section {
+    padding: 60px 0;
+    text-align: center;
+    /* Menggunakan rgba untuk transparansi agar background body terlihat */
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+section:nth-child(even) {
+    /* Menggunakan rgba untuk transparansi agar background body terlihat */
+    background-color: rgba(244, 244, 244, 0.9);
+}
+
+.about-section p, .contact-section p {
+    max-width: 800px;
+    margin: 0 auto 20px auto;
+}
+
+/* Services Section */
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.service-item {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    text-align: left;
+}
+
+.service-item h3 {
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+/* Contact Form */
+.contact-form {
+    max-width: 600px;
+    margin: 40px auto 0 auto;
+    text-align: left;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box; /* Include padding in width */
+    font-size: 16px;
+}
+
+.form-group textarea {
+    resize: vertical; /* Allow vertical resizing */
+}
+
+.contact-form .btn {
+    width: auto;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 12px 30px;
+    border: none;
+}
+
+/* Footer */
+.main-footer {
+    background-color: #333;
+    color: #fff;
+    padding: 30px 0;
+    text-align: center;
+    font-size: 14px;
+}
+
+.main-footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.social-links a {
+    display: inline-block;
+    margin: 0 10px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.social-links img {
+    display: block;
+    width: 24px;
+    height: 24px;
+}
