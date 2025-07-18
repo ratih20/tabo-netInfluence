@@ -1,1 +1,101 @@
+/* Responsive adjustments */
 
+/* For screens smaller than 992px (typical for tablets and smaller laptops) */
+@media (max-width: 991px) {
+    .main-nav {
+        display: none; /* Hide navigation by default on smaller screens */
+        width: 100%;
+        background-color: #fff;
+        position: absolute;
+        top: 65px; /* Adjust based on header height */
+        left: 0;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        text-align: center;
+        padding-bottom: 10px;
+    }
+
+    .main-nav.active {
+        display: block; /* Show when active */
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+    }
+
+    .main-nav ul li {
+        margin: 10px 0;
+    }
+
+    .menu-toggle {
+        display: block; /* Show hamburger icon */
+    }
+
+    .hero-section h2 {
+        font-size: 38px;
+    }
+
+    .hero-section p {
+        font-size: 18px;
+    }
+
+    .service-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}
+
+/* For screens smaller than 768px (typical for mobile devices) */
+@media (max-width: 767px) {
+    .main-header .container {
+        flex-wrap: wrap; /* Allow items to wrap */
+        justify-content: center;
+    }
+
+    .logo {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    .menu-toggle {
+        order: 1; /* Place toggle after logo if needed */
+    }
+
+    .main-nav {
+        top: 100px; /* Adjust if logo wraps */
+    }
+
+    .hero-section {
+        padding: 60px 0;
+    }
+
+    .hero-section h2 {
+        font-size: 32px;
+    }
+
+    .hero-section p {
+        font-size: 16px;
+    }
+
+    section {
+        padding: 40px 0;
+    }
+}
+
+/* For screens smaller than 480px (very small mobile devices) */
+@media (max-width: 479px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr; /* Single column layout */
+    }
+
+    .hero-section h2 {
+        font-size: 28px;
+    }
+
+    .hero-section p {
+        font-size: 15px;
+    }
+}
