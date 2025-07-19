@@ -1,0 +1,16 @@
+<!-- _includes/header.html -->
+<header class="navbar">
+    <div class="nav-logo">
+        <a href="/">{{ site.title }}</a>
+    </div>
+    <nav class="nav-menu">
+        <ul>
+            {% for p in site.header_pages %}
+                {% assign page = site.pages | where: "name", p | first %}
+                {% if page %}
+                    <li><a href="{{ page.url | relative_url }}">{{ page.title | default: page.name | remove: ".md" | capitalize }}</a></li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+    </nav>
+</header>
