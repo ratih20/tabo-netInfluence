@@ -1,0 +1,14 @@
+# _config.yml
+title: Website Saya
+author: Nama Anda
+email: email@anda.com
+description: >-
+  Deskripsi singkat website Anda.
+
+# Pengaturan menu navigasi
+header_pages:
+  - index.md
+  - about.md
+  - layanan.md
+  - blog.md
+  - kontak.md
