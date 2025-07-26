@@ -1,5 +1,5 @@
 /* =========================================== */
-/* 1. GAYA DASAR & BACKGROUND DEEP PURPLE */
+/* 1. GAYA DASAR & BACKGROUND DARI CONTOH ANDA */
 /* =========================================== */
 
 body {
@@ -9,31 +9,30 @@ body {
     color: white; /* Warna teks utama putih agar terbaca */
     line-height: 1.6;
 
-    /* Background gradien deep purple */
-    background: linear-gradient(-45deg, #311B92, #4A148C, #6A1B9A, #8E24AA, #AD1457);
+    /* KODE INI DIAMBIL LANGSUNG DARI CONTOH ANDA */
+    background: linear-gradient(-45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
     background-size: 400% 400%;
     animation: gradientAnimation 20s ease infinite;
 }
 
-/* ANIMASI GRADASI BARU (BERGERAK DIAGONAL) */
+/* ANIMASI DARI CONTOH ANDA */
 @keyframes gradientAnimation {
     0% {
-        background-position: 0% 0%;
+        background-position: 0% 50%;
     }
     50% {
-        background-position: 100% 100%;
+        background-position: 100% 50%;
     }
     100% {
-        background-position: 0% 0%;
+        background-position: 0% 50%;
     }
 }
 
-/* Kontainer utama tanpa background tambahan */
 header, main, footer {
     max-width: 960px;
     margin: 20px auto;
     padding: 20px;
-    /* background: rgba(0, 0, 0, 0.2); <-- DIHILANGKAN */
+    background: none; /* UBAH MENJADI SEPERTI INI */
     border-radius: 8px;
     text-align: center;
 }
@@ -44,14 +43,14 @@ main {
 
 h1, h2, h3 {
     color: white;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.4);
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3); /* Efek bayangan dari contoh Anda */
 }
 
 footer {
     font-size: 0.9em;
     color: #e0e0e0;
     margin-top: 40px;
-    /* background: rgba(0, 0, 0, 0.3); <-- DIHILANGKAN */
+    background: none;
     box-shadow: none;
 }
 
@@ -78,7 +77,7 @@ nav a, .dropbtn {
     margin: 0 5px;
     border-radius: 5px;
     transition: background-color 0.3s;
-    font-family: sans-serif;
+    font-family: sans-serif; /* Menyamakan font */
     font-size: 16px;
     background-color: transparent;
     border: none;
@@ -111,7 +110,7 @@ nav a:hover, .dropbtn:hover {
 }
 
 .dropdown-content a {
-  color: #333333;
+  color: #333333; /* Teks di dalam dropdown gelap agar terbaca */
   padding: 12px 16px;
   display: block;
 }
@@ -124,6 +123,7 @@ nav a:hover, .dropbtn:hover {
   display: block;
 }
 
+/* Membuat judul utama di tengah */
 main h1 {
   text-align: center;
 }
@@ -133,25 +133,25 @@ main h1 {
 /* =========================================== */
 
 .slider-container {
-  max-width: 960px;
+  max-width: 960px; /* Samakan dengan lebar konten lain */
   position: relative;
   margin: auto;
-  overflow: hidden;
+  overflow: hidden; /* Sembunyikan slide lain */
   border-radius: 8px;
 }
 
 .slide {
-  display: none;
+  display: none; /* Sembunyikan semua slide secara default */
   animation: fade 1.5s ease-in-out;
 }
 
-/* Background pada slide-content tetap ada sesuai desain slider */
 .slide-content {
   color: white;
   font-size: 20px;
   padding: 80px 40px;
   text-align: center;
-  background: linear-gradient(-45deg, #311B92, #4A148C, #6A1B9A, #8E24AA, #AD1457);
+  /* Beri background gradasi di setiap slide */
+  background: linear-gradient(-45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
   min-height: 300px;
   display: flex;
   flex-direction: column;
@@ -165,27 +165,31 @@ main h1 {
     color: white;
 }
 
+/* Animasi untuk efek fade in/out */
 @keyframes fade {
   from {opacity: .4}
   to {opacity: 1}
 }
 
+/* Tombol di dalam slider */
 .button {
-    background-color: #AD1457;
-    color: white;
+    background-color: #ffffff;
+    color: #dc2743;
     padding: 12px 25px;
     text-decoration: none;
     border-radius: 25px;
     font-weight: bold;
     margin-top: 20px;
     display: inline-block;
-    transition: transform 0.2s, background-color 0.3s;
+    transition: transform 0.2s;
 }
 .button:hover {
     transform: scale(1.05);
-    background-color: #8E24AA;
+    background-color: #fff;
 }
 
+
+/* Tombol navigasi titik-titik (dots) */
 .slider-dots {
   text-align: center;
   padding: 20px;
@@ -196,14 +200,14 @@ main h1 {
   height: 15px;
   width: 15px;
   margin: 0 5px;
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.6s ease;
 }
 
 .active, .dot:hover {
-  background-color: white;
+  background-color: #717171;
 }
 
 /* =========================================== */
@@ -222,42 +226,46 @@ main h1 {
   font-size: 2.2em;
 }
 
+/* Membuat grid dengan 3 kolom */
 .features-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 25px;
+  grid-template-columns: repeat(3, 1fr); /* 3 kolom dengan lebar yang sama */
+  gap: 25px; /* Jarak antar kotak */
 }
 
+/* Tampilan untuk setiap kotak */
 .feature-box {
-  /* background-color: rgba(0, 0, 0, 0.35); <-- DIHILANGKAN */
+  background-color: rgba(0, 0, 0, 0.25); /* Latar semi-transparan */
   padding: 30px;
   border-radius: 10px;
   text-align: left;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Garis tepi tipis */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Efek saat kursor menyentuh kotak */
 .feature-box:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+  transform: translateY(-10px); /* Kotak sedikit terangkat */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .feature-box h3 {
   margin-top: 0;
   color: #ffffff;
-  border-bottom: 2px solid #8E24AA;
+  border-bottom: 2px solid #f09433; /* Garis bawah oranye pada judul kotak */
   padding-bottom: 10px;
   margin-bottom: 15px;
 }
 
 .feature-box p {
-  color: #e0e0e0;
+  color: #e0e0e0; /* Warna teks deskripsi agar tidak terlalu terang */
   font-size: 0.95em;
 }
 
+/* Penyesuaian untuk layar kecil (ponsel) */
 @media (max-width: 768px) {
   .features-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* Ubah menjadi 1 kolom saja */
   }
 }
 
@@ -280,13 +288,13 @@ main h1 {
 .testimonial-slider-container {
   position: relative;
   overflow: hidden;
-  /* background-color: rgba(0, 0, 0, 0.2); <-- DIHILANGKAN */
+  background-color: transparent;
   border-radius: 8px;
   padding: 40px 20px;
 }
 
 .testimonial-slide {
-  display: none;
+  display: none; /* Sembunyikan semua slide secara default */
   animation: fade 1.5s ease-in-out;
   text-align: center;
 }
@@ -312,6 +320,7 @@ main h1 {
   margin: 0;
 }
 
+/* Tombol navigasi titik-titik (dots) */
 .testimonial-dots {
   text-align: center;
   padding-top: 20px;
@@ -348,36 +357,39 @@ main h1 {
   font-size: 2.2em;
 }
 
+/* Styling untuk setiap item FAQ */
 .faq-section details {
-  /* background-color: rgba(0, 0, 0, 0.3); <-- DIHILANGKAN */
+  background-color: transparent;
   border-radius: 8px;
   margin-bottom: 10px;
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+/* Styling untuk pertanyaan (bagian yang terlihat) */
 .faq-section summary {
   padding: 20px;
   font-weight: bold;
   cursor: pointer;
-  list-style: none;
+  list-style: none; /* Menghilangkan panah default */
   display: flex;
   justify-content: space-between;
   align-items: center;
   text-align: left;
-  color: white;
 }
 
+/* Menambahkan panah custom (segitiga) */
 .faq-section summary::after {
   content: '▶';
   font-size: 0.8em;
   transition: transform 0.3s ease;
-  color: white;
 }
 
+/* Memutar panah saat jawaban terbuka */
 .faq-section details[open] summary::after {
   transform: rotate(90deg);
 }
 
+/* Styling untuk konten jawaban */
 .faq-content {
   padding: 0 20px 20px 20px;
   text-align: left;
@@ -391,7 +403,7 @@ main h1 {
 }
 
 .faq-content a {
-    color: #BBDEFB;
+    color: #99c2ff; /* Warna link biru muda */
     text-decoration: underline;
 }
 
@@ -403,7 +415,7 @@ main h1 {
   max-width: 960px;
   margin: 40px auto;
   padding: 40px 20px;
-  /* background-color: rgba(0, 0, 0, 0.2); <-- DIHILANGKAN */
+  background-color: transparent;
   border-radius: 8px;
   text-align: center;
 }
@@ -415,21 +427,21 @@ main h1 {
 
 .button-whatsapp {
   display: inline-block;
-  background-color: #25D366;
+  background-color: #25D366; /* Warna khas WhatsApp */
   color: white;
   padding: 15px 30px;
   margin-top: 20px;
   font-size: 1.1em;
   font-weight: bold;
-  border-radius: 50px;
+  border-radius: 50px; /* Membuatnya berbentuk kapsul */
   text-decoration: none;
   transition: transform 0.3s ease, background-color 0.3s ease;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .button-whatsapp:hover {
-  background-color: #128C7E;
-  transform: scale(1.05);
+  background-color: #128C7E; /* Warna WhatsApp saat di-hover */
+  transform: scale(1.05); /* Sedikit membesar saat di-hover */
 }
 
 /* =========================================== */
@@ -442,32 +454,35 @@ main h1 {
 }
 
 .social-icons a {
-  color: #ffffff;
-  font-size: 1.8em;
-  margin: 0 15px;
+  color: #ffffff; /* Warna ikon */
+  font-size: 1.8em; /* Ukuran ikon */
+  margin: 0 15px; /* Jarak antar ikon */
   text-decoration: none;
   transition: color 0.3s ease, transform 0.3s ease;
-  display: inline-block;
+  display: inline-block; /* Agar efek transform bekerja dengan baik */
 }
 
+/* Efek saat kursor menyentuh ikon */
 .social-icons a:hover {
-  color: #BBDEFB;
-  transform: translateY(-5px);
+  color: #99c2ff; /* Warna ikon saat disentuh */
+  transform: translateY(-5px); /* Ikon sedikit terangkat */
 }
 
 /* =========================================== */
 /* 10. GAYA UNTUK HALAMAN LAYANAN              */
 /* =========================================== */
 
+/* Grid untuk kartu layanan */
 .service-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr); /* 2 kolom di layar besar */
   gap: 25px;
   margin-top: 40px;
 }
 
+/* Tampilan untuk setiap kartu layanan */
 .service-card {
-  /* background-color: rgba(0, 0, 0, 0.3); <-- DIHILANGKAN */
+  background-color: rgba(0, 0, 0, 0.2);
   padding: 30px;
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.2);
@@ -481,7 +496,7 @@ main h1 {
 .service-card h3 {
   margin-top: 0;
   color: #ffffff;
-  border-bottom: 2px solid #AD1457;
+  border-bottom: 2px solid #e6683c; /* Garis bawah oranye */
   padding-bottom: 10px;
 }
 
@@ -490,23 +505,24 @@ main h1 {
   font-size: 0.95em;
 }
 
+/* Penyesuaian untuk layar kecil (ponsel) */
 @media (max-width: 768px) {
   .service-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* Ubah menjadi 1 kolom saja */
   }
 }
 
 /* =========================================== */
-/* GAYA UNTUK KOMPONEN LAYANAN INTERAKTIF      */
+/* GAYA UNTUK KOMPONEN LAYANAN INTERAKTIF (GAMBAR KLIK) */
 /* =========================================== */
 
 .tiktok-service-item {
-    /* background-color: rgba(0, 0, 0, 0.4); <-- DIHILANGKAN */
+    background-color: rgba(0, 0, 0, 0.3); /* Latar belakang semi-transparan */
     border-radius: 10px;
     margin-bottom: 25px;
-    overflow: hidden;
+    overflow: hidden; /* Penting untuk radius */
     border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;
 }
 
@@ -515,22 +531,22 @@ main h1 {
     align-items: center;
     padding: 20px;
     cursor: pointer;
-    /* background-color: rgba(0, 0, 0, 0.5); <-- DIHILANGKAN */
+    background-color: rgba(0, 0, 0, 0.4); /* Latar belakang header yang sedikit lebih gelap */
     transition: background-color 0.3s ease;
 }
 
 .tiktok-service-header:hover {
-    background-color: rgba(0, 0, 0, 0.1); /* Efek hover yang sangat tipis */
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .tiktok-service-image-wrapper {
-    flex-shrink: 0;
-    width: 80px;
+    flex-shrink: 0; /* Agar gambar tidak mengecil */
+    width: 80px; /* Ukuran gambar ikon */
     height: 80px;
     border-radius: 50%;
     overflow: hidden;
     margin-right: 20px;
-    border: 3px solid #AD1457;
+    border: 3px solid #e6683c; /* Border warna gradien Anda */
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
 }
 
@@ -555,22 +571,23 @@ main h1 {
     transition: transform 0.3s ease;
 }
 
+/* Rotasi ikon saat terbuka */
 .tiktok-service-item.open .tiktok-expand-icon {
     transform: rotate(90deg);
 }
 
 .tiktok-service-content {
-    max-height: 0;
+    max-height: 0; /* Sembunyikan konten secara default */
     overflow: hidden;
     transition: max-height 0.5s ease-out, padding 0.5s ease-out;
-    padding: 0 20px;
+    padding: 0 20px; /* Padding vertikal akan diatur JavaScript saat terbuka */
     color: #e0e0e0;
     text-align: left;
 }
 
 .tiktok-service-item.open .tiktok-service-content {
-    max-height: 500px;
-    padding-bottom: 20px;
+    max-height: 500px; /* Cukup besar untuk konten, sesuaikan jika konten sangat panjang */
+    padding-bottom: 20px; /* Tambahkan padding lagi saat terbuka */
 }
 
 .tiktok-service-content p {
@@ -578,7 +595,7 @@ main h1 {
 }
 
 .tiktok-social-links a {
-    color: #BBDEFB;
+    color: #99c2ff; /* Warna link sosmed */
     margin-right: 15px;
     font-size: 1.1em;
     text-decoration: underline;
@@ -586,7 +603,7 @@ main h1 {
 
 .tiktok-cta-button {
     display: inline-block;
-    background-color: #25D366;
+    background-color: #25D366; /* Warna khas WhatsApp */
     color: white;
     padding: 12px 25px;
     border-radius: 25px;
@@ -616,7 +633,6 @@ main h1 {
     .tiktok-expand-icon {
         margin-top: 15px;
     }
-}
     
 .service-card h3 a,
 .service-card h3 a:visited,
@@ -627,6 +643,6 @@ main h1 {
 
 .service-card h3 a:hover,
 .service-card h3 a:focus {
-  color: #BBDEFB !important;
+  color: #ffd700 !important;
   text-decoration: none !important;
 }
