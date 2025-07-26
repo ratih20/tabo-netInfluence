@@ -79,7 +79,7 @@ plugins:
 # ===============================
 # GOOGLE SEARCH CONSOLE & ANALYTICS
 # ===============================
-google_site_verification: "isi_kode_verifikasi_googlemu" # Jangan lupa isi ini dengan kode verifikasi Anda
+google-site-verification=PT5555QZrwhJyYkZhJBw3uP0jXgteUSNVtRWlrKlSZo # Jangan lupa isi ini dengan kode verifikasi Anda
 google_analytics: "G-XXXXXXXXXX" # Jangan lupa ganti ini dengan ID Google Analytics 4 Anda
 
 # ===============================
