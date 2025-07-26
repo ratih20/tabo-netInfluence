@@ -1,14 +1,17 @@
 # _config.yml
-title: Website Saya
-author: Nama Anda
-email: email@anda.com
-description: >-
-  Deskripsi singkat website Anda.
+title: Jasa Buzzer Sosial Media Profesional
+description: Tingkatkan visibilitas dan engagement akun media sosial Anda.
+baseurl: "" # Kosongkan jika situs Anda di root domain (misal: username.github.io)
+            # Isi dengan "/nama-repo" jika situs Anda di username.github.io/nama-repo
+url: "https://[username].github.io/[repository-name]" # Ganti dengan URL GitHub Pages Anda
+markdown: kramdown
+theme: minima # Anda bisa menggunakan tema default Jekyll atau tema lain
 
-# Pengaturan menu navigasi
-header_pages:
-  - index.md
-  - about.md
-  - layanan.md
-  - blog.md
-  - kontak.md
+# Variabel khusus untuk kemudahan pengelolaan informasi kontak
+company_name: '[Nama Perusahaan Anda]'
+phone_number: '+62 812-3456-7890'
+email_address: 'info@[namaperusahaananda].com'
+address: 'Jl. Contoh No. 123, Bandung, Jawa Barat'
+instagram_link: 'https://instagram.com/yourprofile' # Ganti
+tiktok_link: 'https://tiktok.com/@yourprofile'     # Ganti
+twitter_link: 'https://twitter.com/yourprofile'    # Ganti
