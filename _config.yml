@@ -1,17 +1,128 @@
-# _config.yml
-title: Jasa Buzzer Sosial Media Profesional
-description: Tingkatkan visibilitas dan engagement akun media sosial Anda.
-baseurl: "" # Kosongkan jika situs Anda di root domain (misal: username.github.io)
-            # Isi dengan "/nama-repo" jika situs Anda di username.github.io/nama-repo
-url: "https://[username].github.io/[repository-name]" # Ganti dengan URL GitHub Pages Anda
-markdown: kramdown
-theme: minima # Anda bisa menggunakan tema default Jekyll atau tema lain
+---
+layout: default
+title: Jasa Social Media Marketing
+---
 
-# Variabel khusus untuk kemudahan pengelolaan informasi kontak
-company_name: '[Nama Perusahaan Anda]'
-phone_number: '+62 812-3456-7890'
-email_address: 'info@[namaperusahaananda].com'
-address: 'Jl. Contoh No. 123, Bandung, Jawa Barat'
-instagram_link: 'https://instagram.com/yourprofile' # Ganti
-tiktok_link: 'https://tiktok.com/@yourprofile'     # Ganti
-twitter_link: 'https://twitter.com/yourprofile'    # Ganti
+# ===============================
+# INFORMASI DASAR SITUS (WAJIB)
+# ===============================
+title: AuraDigital
+description: >-
+  AuraDigital: Jasa **optimasi media sosial profesional** untuk **meningkatkan interaksi**, **popularitas**, dan **brand awareness** Anda. Spesialis **buzzer organik**, **trending topic**, **komentar otentik**, dan **strategi FYP TikTok** untuk hasil nyata di platform digital.
+url: "https://auradigital.site" # <--- UPDATED DOMAIN
+baseurl: "" # <--- UPDATED: Kosongkan jika di root domain
+lang: id
+
+# ===============================
+# PENULIS DAN BRAND (WAJIB)
+# ===============================
+author:
+  name: AuraDigital
+  email: warungaapagaden@gmail.com # Pastikan ini email yang valid
+
+# ===============================
+# MEDIA SOSIAL (UNTUK SEO & OG TAG)
+# ===============================
+social:
+  name: AuraDigital
+  links:
+    - https://instagram.com/jasa.buzzerdigital.id
+    - https://twitter.com/auradigitalid
+    - https://facebook.com/auradigitalid
+    - https://t.me/auradigitalid
+
+# ===============================
+# GAMBAR DEFAULT UNTUK SHARE (OG IMAGE)
+# ===============================
+image: /assets/images/og-image.png
+
+# ===============================
+# META KEYWORDS (LANDSCAPE STYLE)
+# AKAN DIPANGGIL DI <HEAD> LAYOUT
+# ===============================
+keywords: >- # <--- UPDATED & OPTIMIZED KEYWORDS
+  jasa social media marketing,
+  jasa optimasi media sosial,
+  jasa naikkan interaksi sosial media,
+  jasa popularitas online,
+  jasa branding digital,
+  buzzer sosial media,
+  buzzer organik,
+  jasa buzzer TikTok,
+  jasa buzzer Instagram,
+  jasa buzzer Twitter,
+  jasa komentar media sosial,
+  jasa top komentar,
+  jasa trending topic,
+  strategi FYP TikTok,
+  jasa viral konten,
+  promosi digital,
+  influencer marketing,
+  jasa endorse,
+  jasa view TikTok,
+  jasa like,
+  jasa share,
+  jasa beli followers aktif,
+  akun aktif Indonesia,
+  agen media sosial,
+  konsultan sosial media
+
+# ===============================
+# SEO PLUGIN (WAJIB AKTIF)
+# ===============================
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-robots-txt
+
+# ===============================
+# GOOGLE SEARCH CONSOLE & ANALYTICS
+# ===============================
+google_site_verification: "isi_kode_verifikasi_googlemu" # Jangan lupa isi ini dengan kode verifikasi Anda
+google_analytics: "G-XXXXXXXXXX" # Jangan lupa ganti ini dengan ID Google Analytics 4 Anda
+
+# ===============================
+# SITEMAP
+# ===============================
+sitemap:
+  filename: sitemap.xml
+  exclude:
+    - /assets/
+    - /drafts/
+  include_posts: true
+  changefreq: weekly
+  priority: 1.0
+
+# ===============================
+# ROBOTS.TXT OTOMATIS
+# ===============================
+robots:
+  sitemap: true
+  user-agent: "*"
+  allow: "/"
+
+# ===============================
+# DEFAULTS UNTUK SEMUA HALAMAN
+# ===============================
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: default
+      lang: id
+      permalink: /:title/
+
+# ===============================
+# SCHEMA.ORG STRUCTURE
+# ===============================
+organization:
+  name: AuraDigital
+  url: "https://auradigital.site" # <--- UPDATED DOMAIN
+  logo: /assets/images/logo.png
+  sameAs:
+    - https://instagram.com/jasa.buzzerdigital.id
+    - https://twitter.com/auradigitalid
+    - https://t.me/auradigitalid
+    - https://facebook.com/auradigitalid
