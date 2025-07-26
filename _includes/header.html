@@ -1,16 +1,9 @@
-<!-- _includes/header.html -->
-<header class="navbar">
-    <div class="nav-logo">
-        <a href="/">{{ site.title }}</a>
-    </div>
-    <nav class="nav-menu">
-        <ul>
-            {% for p in site.header_pages %}
-                {% assign page = site.pages | where: "name", p | first %}
-                {% if page %}
-                    <li><a href="{{ page.url | relative_url }}">{{ page.title | default: page.name | remove: ".md" | capitalize }}</a></li>
-                {% endif %}
-            {% endfor %}
-        </ul>
-    </nav>
-</header>
+<nav>
+    <ul>
+        <li><a href="#beranda">Beranda</a></li>
+        <li><a href="#layanan">Layanan</a></li>
+        <li><a href="#tentang">Tentang Kami</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#kontak">Kontak</a></li>
+    </ul>
+</nav>
