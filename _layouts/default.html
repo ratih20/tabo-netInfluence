@@ -4,111 +4,111 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    {% seo %} {# Ini adalah Jekyll SEO tag, pastikan Anda telah menginstal plugin jekyll-seo-tag #}
+    {% seo %}
 
-    <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
-    
+    <link rel="stylesheet" href="{{ "/assets/style.css" | relative_url }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     
     </head>
 <body>
 
-    {% include header.html %} 
-    
+    <header>
+        <h1>{{ page.title }}</h1>
+        {% include navigation.html %}
+        <hr>
+    </header>
+
     <main>
         {{ content }}
     </main>
     
-    {% include navigation.html %}
+    <footer>
+    <div class="social-icons">
+      <a href="https://instagram.com/jasa.buzzerdigital.id" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://x.com/auradigitalid" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+      <a href="https://tiktok.com/@auradigital.id" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+      <a href="[LINK_TELEGRAM_ANDA]" target="_blank" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+    </div>
+
+    <hr>
+    <p class="footer-copyright">
+    Hak Cipta &copy; 2025 Aura Digital. All Rights Reserved.
+</p>
+</footer>
 
     <script>
-        // Fungsi slider dan fungsi interaktif lainnya
-        function initializeSlider(containerClass, slideClass, dotsClass, interval) {
-            const container = document.querySelector('.' + containerClass);
-            if (!container) return; // Keluar jika container tidak ditemukan
-            
-            const dotsContainer = document.querySelector('.' + dotsClass);
-            const slides = container.querySelectorAll('.' + slideClass);
-            let slideIndex = 0;
-            let autoSlideInterval;
+      // Fungsi slider dan fungsi interaktif lainnya
+      function initializeSlider(containerClass, slideClass, dotsClass, interval) {
+        const container = document.querySelector('.' + containerClass);
+        if (!container) return;
+        
+        const dotsContainer = document.querySelector('.' + dotsClass);
+        const slides = container.querySelectorAll('.' + slideClass);
+        let slideIndex = 0;
+        let autoSlideInterval;
 
-            if (slides.length === 0) return; // Keluar jika tidak ada slide
+        if (slides.length === 0) return;
 
-            // Inisialisasi dots
-            if (dotsContainer) {
-                dotsContainer.innerHTML = ''; // Bersihkan dots yang mungkin ada
-                for (let i = 0; i < slides.length; i++) {
-                    const dot = document.createElement('span');
-                    dot.className = 'dot';
-                    dot.onclick = () => showSpecificSlide(i);
-                    dotsContainer.appendChild(dot);
-                }
+        if (dotsContainer) {
+            dotsContainer.innerHTML = '';
+            for (let i = 0; i < slides.length; i++) {
+                const dot = document.createElement('span');
+                dot.className = 'dot';
+                dot.onclick = () => showSpecificSlide(i);
+                dotsContainer.appendChild(dot);
             }
-            const dots = dotsContainer ? dotsContainer.querySelectorAll('.dot') : [];
+        }
+        const dots = dotsContainer ? dotsContainer.querySelectorAll('.dot') : [];
 
-            function showSlides() {
-                // Sembunyikan semua slide dan nonaktifkan semua dot
-                for (let i = 0; i < slides.length; i++) {
-                    slides[i].style.display = "none";
-                }
-                if (dots.length > 0) {
-                    for (let i = 0; i < dots.length; i++) {
-                        dots[i].className = dots[i].className.replace(" active", "");
-                    }
-                }
-                
-                // Pindah ke slide berikutnya
-                slideIndex++;
-                if (slideIndex > slides.length) {
-                    slideIndex = 1; // Kembali ke slide pertama
-                }
-                
-                // Tampilkan slide yang aktif dan aktifkan dot yang sesuai
-                slides[slideIndex - 1].style.display = "block";
-                if (dots.length > 0) {
-                    dots[slideIndex - 1].className += " active";
+        function showSlides() {
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            if (dots.length > 0) {
+                for (let i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
                 }
             }
             
-            function showSpecificSlide(n) {
-                slideIndex = n; // Set index ke slide yang diklik
-                clearInterval(autoSlideInterval); // Hentikan auto-slide sementara
-                showSlides(); // Tampilkan slide yang dipilih
-                autoSlideInterval = setInterval(showSlides, interval); // Mulai lagi auto-slide
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1;
             }
-
-            // Jalankan slide pertama kali dan mulai auto-slide
-            showSlides(); 
-            autoSlideInterval = setInterval(showSlides, interval); 
+            
+            slides[slideIndex - 1].style.display = "block";
+            if (dots.length > 0) {
+                dots[slideIndex - 1].className += " active";
+            }
         }
         
-        // Fungsi untuk FAQ accordion (jika Anda menggunakan <details>/<summary> tidak perlu JS ini)
-        document.addEventListener('DOMContentLoaded', function() {
-            // Jika Anda menggunakan struktur accordion lama dengan button header
-            const accordionHeaders = document.querySelectorAll('.accordion-header');
-            accordionHeaders.forEach(header => {
-                header.addEventListener('click', function() {
-                    const accordionItem = this.parentElement;
-                    accordionItem.classList.toggle('active');
-                });
-            });
+        function showSpecificSlide(n) {
+            slideIndex = n;
+            clearInterval(autoSlideInterval);
+            showSlides();
+            autoSlideInterval = setInterval(showSlides, interval);
+        }
 
-            // Inisialisasi slider setelah DOM dimuat
-            initializeSlider('slider-container', 'slide', 'slider-dots', 5000); // Slider utama
-            initializeSlider('testimonial-slider-container', 'testimonial-slide', 'testimonial-dots', 7000); // Slider testimoni
-        });
+        showSlides(); 
+        autoSlideInterval = setInterval(showSlides, interval); 
+      }
+      
+      // Menjalankan fungsi setelah halaman dimuat
+      document.addEventListener('DOMContentLoaded', function() {
+          initializeSlider('slider-container', 'slide', 'slider-dots', 5000);
+          initializeSlider('testimonial-slider-container', 'testimonial-slide', 'testimonial-dots', 7000);
+      });
     </script>
-    
-    <script type="text/javascript">
-        var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-        (function(){
-        var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-        s1.async=true;
-        s1.src='https://embed.tawk.to/687ba7323ce405191c8c5d56/1j0hga89t';
-        s1.charset='UTF-8';
-        s1.setAttribute('crossorigin','*');
-        s0.parentNode.insertBefore(s1,s0);
-        })();
-    </script>
-</body>
+  
+  <script type="text/javascript">
+  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+  (function(){
+  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+  s1.async=true;
+  s1.src='https://embed.tawk.to/687ba7323ce405191c8c5d56/1j0hga89t';
+  s1.charset='UTF-8';
+  s1.setAttribute('crossorigin','*');
+  s0.parentNode.insertBefore(s1,s0);
+  })();
+  </script>
+  </body>
 </html>
