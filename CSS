@@ -1,5 +1,5 @@
 /* =========================================== */
-/* 1. GAYA DASAR & BACKGROUND DEEP PURPLE */
+/* 1. GAYA DASAR & BACKGROUND SUNSET */
 /* =========================================== */
 
 body {
@@ -9,22 +9,22 @@ body {
     color: white; /* Warna teks utama putih agar terbaca */
     line-height: 1.6;
 
-    /* Background gradien deep purple */
-    background: linear-gradient(-45deg, #311B92, #4A148C, #6A1B9A, #8E24AA, #AD1457);
+    /* Background gradien baru: dari ungu ke oranye (sunset) */
+    background: linear-gradient(-45deg, #4A148C, #AD1457, #F47C3C, #FFC107);
     background-size: 400% 400%;
     animation: gradientAnimation 20s ease infinite;
 }
 
-/* ANIMASI GRADASI */
+/* ANIMASI GRADASI (BERGERAK DIAGONAL) */
 @keyframes gradientAnimation {
     0% {
-        background-position: 0% 50%;
+        background-position: 0% 0%;
     }
     50% {
-        background-position: 100% 50%;
+        background-position: 100% 100%;
     }
     100% {
-        background-position: 0% 50%;
+        background-position: 0% 0%;
     }
 }
 
@@ -145,13 +145,13 @@ main h1 {
   animation: fade 1.5s ease-in-out;
 }
 
-/* Background pada slide-content tetap ada sesuai desain slider */
+/* Background pada slide-content juga diubah agar konsisten */
 .slide-content {
   color: white;
   font-size: 20px;
   padding: 80px 40px;
   text-align: center;
-  background: linear-gradient(-45deg, #311B92, #4A148C, #6A1B9A, #8E24AA, #AD1457);
+  background: linear-gradient(-45deg, #4A148C, #AD1457, #F47C3C, #FFC107);
   min-height: 300px;
   display: flex;
   flex-direction: column;
@@ -183,7 +183,7 @@ main h1 {
 }
 .button:hover {
     transform: scale(1.05);
-    background-color: #8E24AA;
+    background-color: #F47C3C; /* Warna hover diubah ke oranye */
 }
 
 .slider-dots {
@@ -245,7 +245,7 @@ main h1 {
 .feature-box h3 {
   margin-top: 0;
   color: #ffffff;
-  border-bottom: 2px solid #8E24AA;
+  border-bottom: 2px solid #F47C3C; /* Border diubah ke oranye */
   padding-bottom: 10px;
   margin-bottom: 15px;
 }
@@ -391,7 +391,7 @@ main h1 {
 }
 
 .faq-content a {
-    color: #BBDEFB;
+    color: #FFD180; /* Warna link diubah ke kuning muda */
     text-decoration: underline;
 }
 
@@ -451,7 +451,7 @@ main h1 {
 }
 
 .social-icons a:hover {
-  color: #BBDEFB;
+  color: #FFD180; /* Warna ikon hover diubah ke kuning muda */
   transform: translateY(-5px);
 }
 
@@ -578,7 +578,7 @@ main h1 {
 }
 
 .tiktok-social-links a {
-    color: #BBDEFB;
+    color: #FFD180; /* Warna link sosmed diubah ke kuning muda */
     margin-right: 15px;
     font-size: 1.1em;
     text-decoration: underline;
@@ -627,6 +627,6 @@ main h1 {
 
 .service-card h3 a:hover,
 .service-card h3 a:focus {
-  color: #BBDEFB !important;
+  color: #FFD180 !important; /* Warna hover diubah ke kuning muda */
   text-decoration: none !important;
 }
