@@ -1,33 +1,110 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ page.title }} - {{ site.title }}</title>
-    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-</head>
-<body>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    {% include header.html %}
+  <title>{{ page.title }}</title>
+  <meta name="description" content="{{ page.description }}">
+  <meta name="keywords" content="{{ page.keywords }}">
+  {% if page.robots %}
+<meta name="robots" content="{{ page.robots }}">
+{% endif %}
+  <link rel="canonical" href="{{ site.url }}{{ page.permalink }}">
 
-    <main>
-        {{ content }}
-    </main>
+  <!-- Open Graph (OG) untuk Facebook dan sosial media lain -->
+  <meta property="og:title" content="{{ page.title }}">
+  <meta property="og:description" content="{{ page.description }}">
+  <meta property="og:url" content="{{ site.url }}{{ page.permalink }}">
+  <meta property="og:image" content="{{ site.url }}{{ page.image }}">
+  <meta property="og:type" content="website">
 
-    {% include footer.html %}
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ page.title }}">
+  <meta name="twitter:description" content="{{ page.description }}">
+  <meta name="twitter:image" content="{{ site.url }}{{ page.image }}">
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const accordionHeaders = document.querySelectorAll('.accordion-header');
-            accordionHeaders.forEach(header => {
-                header.addEventListener('click', function() {
-                    const accordionItem = this.parentElement;
-                    accordionItem.classList.toggle('active');
-                });
-            });
-        });
-    </script>
-
-</body>
-</html>
+  <!-- Styles -->
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://auradigital.site/#organization",
+      "name": "Aura Digital",
+      "url": "https://auradigital.site/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://auradigital.site/image/logo.auradigital.webp",
+        "width": 240,
+        "height": 240
+      },
+      "sameAs": [
+        "https://instagram.com/jasa.buzzerdigital.id",
+        "https://tiktok.com/@auradigital.id",
+        "https://x.com/auradigitalid"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://auradigital.site/#website",
+      "url": "https://auradigital.site/",
+      "name": "Aura Digital",
+      "publisher": {
+        "@id": "https://auradigital.site/#organization"
+      },
+      "description": "Jasa Menaikkan Interaksi & Popularitas Media Sosial Profesional",
+      "inLanguage": "id"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://auradigital.site/#webpage",
+      "url": "https://auradigital.site/",
+      "name": "Aura Digital | Solusi Jasa Buzzer & Strategi Viral Marketing Media Sosial",
+      "isPartOf": {
+        "@id": "https://auradigital.site/#website"
+      },
+      "about": {
+        "@id": "https://auradigital.site/#organization"
+      },
+      "description": "Maksimalkan Jangkauan dengan Layanan Viral Sosial Media: Komentar FYP, Trending, & Buzzer Profesional",
+      "breadcrumb": {
+        "@id": "https://auradigital.site/#breadcrumb"
+      },
+      "inLanguage": "id"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://auradigital.site/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Beranda",
+          "item": "https://auradigital.site/"
+        }
+      ]
+    },
+    {
+      "@type": "WPHeader",
+      "@id": "https://auradigital.site/#header",
+      "url": "https://auradigital.site/#header",
+      "name": "Aura Digital Header",
+      "description": "Bagian atas situs web Aura Digital"
+    },
+    {
+      "@type": "WPFooter",
+      "@id": "https://auradigital.site/#footer",
+      "url": "https://auradigital.site/#footer",
+      "name": "Aura Digital Footer",
+      "description": "Bagian bawah situs web Aura Digital"
+    }
+  ]
+}
+</script>
